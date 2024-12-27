@@ -41,7 +41,7 @@ Before you start, ensure you have the following tools installed:
 ```bash
 git clone https://github.com/your-username/product-management-app.git
 cd product-management-app
-2. Back-End Setup
+2.🚀 Back-End Setup
 Configure PostgreSQL
 Install PostgreSQL.
 Create a new database:
@@ -56,7 +56,8 @@ spring.datasource.username=your_postgresql_username
 spring.datasource.password=your_postgresql_password
 spring.jpa.hibernate.ddl-auto=update
 spring.datasource.driver-class-name=org.postgresql.Driver
-Configure Cloudinary
+
+🚀Configure Cloudinary
 Sign up for a Cloudinary account at Cloudinary.
 Add your credentials to application.properties:
 properties
@@ -64,7 +65,8 @@ Copy code
 cloudinary.cloud-name=your_cloud_name
 cloudinary.api-key=your_api_key
 cloudinary.api-secret=your_api_secret
-3. Front-End Setup
+
+3.🚀 Front-End Setup
 Navigate to the frontend directory:
 
 bash
@@ -80,13 +82,13 @@ Update the API endpoint in src/api.js to point to your back-end server:
 javascript
 Copy code
 const API_BASE_URL = "http://localhost:8081";
-4. Configure Cloudinary in the Front-End
+
+4. 🚀Configure Cloudinary in the Front-End
 To enable image uploading with Cloudinary, configure the front-end to handle file uploads.
 
 In the CreateProduct.jsx file, add your Cloudinary Cloud Name and Upload Preset Name:
 
-Find the Cloudinary configuration section in CreateProduct.jsx and replace your_cloud_name_here and your_upload_preset_name_here with your actual Cloudinary details.
-Update the following lines:
+Update the following lines in CreateProduct.jsx  :
 javascript
 Copy code
 imageData.append("upload_preset", "your_upload_preset_name_here");  // Line 80
@@ -99,16 +101,8 @@ const imageResponse = await axios.post(
 What you need to do:
 Replace your_upload_preset_name_here with the upload preset you have created on Cloudinary.
 Replace your_cloud_name_here with your Cloudinary Cloud Name.
-Example after replacing with actual values:
 
-javascript
-Copy code
-imageData.append("upload_preset", "e-commerce");  // Replace with your actual preset name
 
-const imageResponse = await axios.post(
-  "https://api.cloudinary.com/v1_1/do1ugsc7y/image/upload",  // Replace with your actual cloud name
-  imageData
-);
 🚀 Running the Application
 Start the Back-End
 In the root of the project, navigate to the backend folder and run:
