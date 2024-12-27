@@ -39,8 +39,8 @@ Before you start, ensure you have the following tools installed:
 
 ### 1. Clone the Repository
 ```bash
-git clone https://github.com/your-username/product-management-app.git
-cd product-management-app
+git clone https://github.com/HasiniCha/HasiniCha-Product-Management-Dashboard.git
+
 2.🚀 Back-End Setup
 Configure PostgreSQL
 Install PostgreSQL.
@@ -48,7 +48,7 @@ Create a new database:
 sql
 Copy code
 CREATE DATABASE product_management_db;
-Update the application.properties file located in src/main/resources/:
+Update the application.properties
 properties
 Copy code
 spring.datasource.url=jdbc:postgresql://localhost:5432/product_management_db
@@ -86,7 +86,7 @@ const API_BASE_URL = "http://localhost:8081";
 4. 🚀Configure Cloudinary in the Front-End
 To enable image uploading with Cloudinary, configure the front-end to handle file uploads.
 
-In the CreateProduct.jsx file, add your Cloudinary Cloud Name and Upload Preset Name:
+🛠️ In the CreateProduct.jsx file(line 80 and 83), add your Cloudinary Cloud Name and Upload Preset Name:
 
 Update the following lines in CreateProduct.jsx  :
 javascript
