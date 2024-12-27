@@ -1,0 +1,299 @@
+/* View Product: Flex container to hold Sidebar and content side by side */
+.productView {
+  display: flex;
+  padding: 2rem;
+}
+
+.sidebar {
+  width: 250px;
+  margin-right: 20px;
+}
+
+.contentArea {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+#productList {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.searchBar {
+  margin-bottom: 1rem;
+}
+
+.productList {
+  margin-top: 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+/* Product Card Styles */
+#productList .col {
+  flex: 1 1 calc(33.333% - 1rem); /* 3 cards per row with gaps */
+  max-width: calc(33.333% - 1rem); 
+  box-sizing: border-box;
+}
+
+#productList .col .card {
+  height: 350px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.card-body {
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  height: calc(100% - 200px); 
+}
+
+.card-body h5 {
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.card-body p {
+  font-size: 0.875rem;
+  color: #555;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 3; 
+  -webkit-box-orient: vertical;
+}
+
+.product-card-price {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #333;
+  float: right;
+}
+
+.card-text {
+  display: -webkit-box;
+  -webkit-line-clamp: 2; /* Limits to 2 lines */
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* Product Details Styles */
+.product-details-card {
+  display: flex;
+  flex-direction: row;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+}
+
+.image-col {
+  width: 250px; 
+  height: 250px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.image-col img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.details-col {
+  padding-left: 20px;
+}
+
+.details-col .btn {
+  margin-top: 10px;
+}
+
+.product-details-card .row {
+  margin-bottom: 20px;
+}
+
+.product-details-card .card-body {
+  padding: 20px;
+}
+
+/* Responsive Styles for Product Details */
+@media (max-width: 768px) {
+  .product-details-card {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .image-col {
+    width: 100%;
+    height: 200px;
+  }
+
+  .details-col {
+    padding-left: 0;
+    padding-top: 20px;
+  }
+}
+
+@media (max-width: 576px) {
+  .product-details-card {
+    padding: 10px; 
+  }
+
+  .image-col {
+    height: 150px; 
+  }
+
+  .details-col .btn {
+    font-size: 0.875rem; 
+  }
+}
+
+/* Sidebar Styles */
+.sidebar {
+  background-color: #f8f9fa; 
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+.sidebar input:hover {
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+.sidebar h5 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 20px;
+  color: #333; 
+}
+
+.list-group {
+  padding-left: 0; 
+  list-style-type: none; 
+}
+
+.list-group-item {
+  display: flex;
+  align-items: center;
+  font-size: 1rem;
+  padding: 8px 12px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.list-group-item:hover {
+  background-color: #e2e6ea; 
+  transform: translateX(1px);
+}
+
+input[type="checkbox"] {
+  margin-right: 12px;
+  transform: scale(1.2);
+  transition: transform 0.3s ease;
+  cursor: pointer;
+}
+
+input[type="checkbox"]:checked {
+  background-color: #5c6bc0;
+  border-color: #5c6bc0;
+}
+
+input[type="checkbox"]:focus {
+  outline: none;
+}
+
+@media (max-width: 768px) {
+  .sidebar {
+    width: 100%;
+    padding: 15px;
+  }
+}
+
+/* Create Product Page Styles */
+.product-image-preview {
+  margin-top: 10px;
+  width: 200px;
+  height: auto;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+}
+
+h2 {
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+  font-weight: bold;
+}
+
+button.mt-3 {
+  margin-top: 20px;
+}
+
+/* Responsive styles for Create Product */
+@media (max-width: 768px) {
+  .product-image-preview {
+    width: 100%;
+    height: auto;
+  }
+}
+
+/* Admin Dashboard Styles */
+.dashboard-card {
+  height: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 10px;
+  background-color: #f8f9fa;
+  margin-top: 55px;
+}
+
+.AdminHeading {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+  margin-top: 30px;
+}
+
+/* Create/Update Button Styles */
+.create-update-button {
+  padding: 10px 20px;  
+  font-size: 16px; 
+  margin-bottom: 10px;
+  transition: background-color 0.3s ease, transform 0.3s ease; 
+}
+
+.create-update-button:hover {
+  background-color: #0056b3; 
+  transform: translateY(-2px); 
+}
+
+.create-update-button:focus {
+  outline: none; 
+  box-shadow: 0 0 0 2px rgba(38, 143, 255, 0.5); 
+}
+
+.create-update-button:active {
+  background-color: #003c8f;
+  transform: translateY(0);
+}
