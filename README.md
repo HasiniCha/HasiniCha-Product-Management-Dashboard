@@ -3,10 +3,10 @@ An Admin Dashboard for managing products, built with React for the front-end and
 
 ## 📸 Screenshots
 
-![Product Screenshot](assets/category.png)
-![Product Screenshot](assets/create.png)
-![Product Screenshot](assets/home.png)
-![Product Screenshot](assets/products.png)
+![Product Screenshot](assets/category.PNG)
+![Product Screenshot](assets/create.PNG)
+![Product Screenshot](assets/home.PNG)
+![Product Screenshot](assets/products.PNG)
 
 ## 🚀 Features
 
